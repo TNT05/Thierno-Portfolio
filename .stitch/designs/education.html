@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&amp;family=DM+Serif+Display:ital@0;1&amp;family=JetBrains+Mono:wght@400;700&amp;family=Noto+Serif:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#390c00",
+                        "on-secondary": "#532200",
+                        "secondary-container": "#974400",
+                        "surface-container-highest": "#353534",
+                        "primary-container": "#c1440e",
+                        "surface-bright": "#3a3939",
+                        "on-error": "#690005",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#5c1900",
+                        "outline-variant": "#59413a",
+                        "primary-fixed-dim": "#ffb59c",
+                        "tertiary-fixed-dim": "#ffb955",
+                        "secondary": "#ffb68c",
+                        "error": "#ffb4ab",
+                        "inverse-primary": "#aa3600",
+                        "outline": "#a88a81",
+                        "tertiary-fixed": "#ffddb4",
+                        "surface-dim": "#131313",
+                        "secondary-fixed-dim": "#ffb68c",
+                        "surface-container-low": "#1c1b1b",
+                        "inverse-on-surface": "#313030",
+                        "on-primary-container": "#ffeee9",
+                        "on-secondary-fixed-variant": "#763400",
+                        "secondary-fixed": "#ffdbc9",
+                        "on-tertiary-container": "#ffefe0",
+                        "primary": "#ffb59c",
+                        "surface-container": "#201f1f",
+                        "surface-tint": "#ffb59c",
+                        "on-tertiary": "#452b00",
+                        "background": "#131313",
+                        "tertiary": "#ffb955",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary-fixed": "#321200",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary-container": "#986300",
+                        "on-primary-fixed-variant": "#822800",
+                        "surface-variant": "#353534",
+                        "on-secondary-container": "#ffc9ac",
+                        "on-surface-variant": "#e1bfb5",
+                        "surface-container-high": "#2a2a2a",
+                        "on-tertiary-fixed": "#291800",
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "surface": "#131313",
+                        "primary-fixed": "#ffdbcf",
+                        "on-background": "#e5e2e1",
+                        "on-surface": "#e5e2e1",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["DM Serif Display"],
+                        "mono": ["JetBrains Mono"],
+                        "serif": ["Noto Serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .kente-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0l20 20-20 20L0 20z' fill='%23D4A017' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .kente-stripe {
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0l10 10-10 10L0 10z' fill='%23C1440E' fill-opacity='0.15'/%3E%3C/svg%3E");
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-serif selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden min-h-screen">
+<!-- Kente Texture Layer -->
+<div class="fixed inset-0 kente-overlay pointer-events-none z-0"></div>
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-neutral-950/70 backdrop-blur-xl flex justify-between items-center px-8 md:px-12 py-6 max-w-full mx-auto transition-all duration-300">
+<div class="text-2xl font-extrabold tracking-tighter text-neutral-50 dark:text-neutral-100 font-headline uppercase">
+            TB
+        </div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-neutral-400 dark:text-neutral-500 hover:text-neutral-100 transition-colors duration-200 ease-out font-headline font-extrabold uppercase tracking-[-0.04em] text-sm" href="#">About</a>
+<a class="text-neutral-400 dark:text-neutral-500 hover:text-neutral-100 transition-colors duration-200 ease-out font-headline font-extrabold uppercase tracking-[-0.04em] text-sm" href="#">Projects</a>
+<a class="text-neutral-400 dark:text-neutral-500 hover:text-neutral-100 transition-colors duration-200 ease-out font-headline font-extrabold uppercase tracking-[-0.04em] text-sm" href="#">Skills</a>
+<a class="text-neutral-400 dark:text-neutral-500 hover:text-neutral-100 transition-colors duration-200 ease-out font-headline font-extrabold uppercase tracking-[-0.04em] text-sm" href="#">Contact</a>
+</div>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</nav>
+<!-- Main Content Canvas -->
+<main class="relative z-10 pt-32 pb-24 px-6 md:px-24 lg:px-32 max-w-7xl mx-auto flex flex-col md:flex-row gap-12 lg:gap-24">
+<!-- Vertical Kente Left Accent -->
+<div class="hidden md:block absolute left-4 top-0 bottom-0 w-4 kente-stripe opacity-40"></div>
+<!-- Sidebar Label & Branding -->
+<aside class="md:w-1/4 shrink-0">
+<div class="sticky top-40 space-y-4">
+<span class="font-mono text-sm tracking-widest text-[#5C5048] block">08 / EDUCATION</span>
+<div class="h-0.5 w-12 bg-primary-container"></div>
+<p class="font-body italic text-on-surface-variant text-lg leading-relaxed">
+                    The intellectual scaffolding upon which my engineering practice is built.
+                </p>
+</div>
+</aside>
+<!-- Content Area -->
+<section class="flex-grow">
+<!-- Headline -->
+<div class="mb-20">
+<h1 class="font-headline text-6xl md:text-8xl font-extrabold text-[#F0EBE3] tracking-[-0.04em] leading-none mb-4">
+                    The Foundation
+                </h1>
+<div class="h-[1px] w-full max-w-2xl bg-primary-container/40"></div>
+</div>
+<!-- Editorial Grid of Cards -->
+<div class="grid grid-cols-1 gap-20">
+<!-- Card 1: UOttawa -->
+<article class="group relative bg-surface-container-low p-8 md:p-12 border-l-[3px] border-primary-container transition-all duration-500 hover:bg-surface-container">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
+<div class="space-y-1">
+<h2 class="font-headline text-xl font-semibold text-on-surface tracking-tight uppercase">University of Ottawa</h2>
+<h3 class="font-headline text-4xl md:text-5xl font-bold text-primary-container tracking-tight leading-tight">
+                                B.Sc. Computer Science
+                            </h3>
+</div>
+<div class="font-mono text-sm text-tertiary-fixed-dim bg-surface-container-highest px-3 py-1">
+                            2019 — 2023
+                        </div>
+</div>
+<div class="grid md:grid-cols-2 gap-12 items-start">
+<div class="space-y-6">
+<p class="font-body text-xl md:text-2xl text-on-surface-variant italic leading-relaxed">
+                                Intensive focus on distributed systems and algorithmic complexity within a research-driven environment. Developed a deep proficiency in low-level architecture and high-scale software patterns.
+                            </p>
+<ul class="space-y-2 font-mono text-xs uppercase tracking-wider text-outline">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span> Distributed Computing</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span> Compiler Design</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span> Operating Systems</li>
+</ul>
+</div>
+<div class="aspect-[4/3] relative overflow-hidden grayscale contrast-125 opacity-60 hover:grayscale-0 transition-all duration-700">
+<img alt="Academic architecture" class="object-cover w-full h-full" data-alt="Modernist concrete university campus architecture with dramatic brutalist lines and harsh shadows in black and white style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnbfFjOGQvPBWOa9VkNQt244UP21wT0V2tTdLU4_B4MhkHd8hqdKU_ObCevY7yLdGBON6bNmtzGLxHBHrLJSe-V0voPtb5cdbueZtvwLswEAHxxXheKS4kfUUN7kaNfaXtuBPYYZhGN5vT-Aicp07vof9EFYIF_RloWCNv3CYieMcFpFYRdjf_DhGgA6Fdtylw4bRLFzIuJbMZDUhn3QyhIbGWeEagT9MBNk_37OhXpVjhc2L0BnP5eZaCW8Fqh4ybCcKh7SjeLvM"/>
+</div>
+</div>
+</article>
+<!-- Kente Horizontal Divider -->
+<div class="w-full h-8 kente-stripe opacity-20"></div>
+<!-- Card 2: Carleton -->
+<article class="group relative bg-surface-container-low p-8 md:p-12 border-l-[3px] border-primary-container transition-all duration-500 hover:bg-surface-container">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
+<div class="space-y-1">
+<h2 class="font-headline text-xl font-semibold text-on-surface tracking-tight uppercase">Carleton University</h2>
+<h3 class="font-headline text-4xl md:text-5xl font-bold text-primary-container tracking-tight leading-tight">
+                                Minor in Mathematics
+                            </h3>
+</div>
+<div class="font-mono text-sm text-tertiary-fixed-dim bg-surface-container-highest px-3 py-1">
+                            2019 — 2023
+                        </div>
+</div>
+<div class="grid md:grid-cols-2 gap-12 items-start">
+<div class="order-2 md:order-1 aspect-[4/3] relative overflow-hidden grayscale contrast-125 opacity-60 hover:grayscale-0 transition-all duration-700">
+<img alt="Mathematical notation" class="object-cover w-full h-full" data-alt="Close up of complex white mathematical equations hand-written on a dark chalk board with vintage texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQk2B-aels_Xq2hcSwZv1nAeYZBU7xdv9ti3uEt6ATGpkbLn06W7m7p3bLQO9763ia9AyoEwX4T1KXeJ_STFjljtjHcxDbZ5ob52Bo5Yrl3QSw4w00UZdAP8swyBSU9Frni6ysVFA9smPIrq6zzMRlOJcEy7SJQurug0IUm8Z26b6D22E-CNkRaN-oTOCR_uPbBFmo95yLbyUbzxk1mstc06k2Tqa-Y2lkwtOOB-YnIQQKdvRe0XTtE3pW1XTEhUK3BSvnR5U_-Aw"/>
+</div>
+<div class="order-1 md:order-2 space-y-6">
+<p class="font-body text-xl md:text-2xl text-on-surface-variant italic leading-relaxed">
+                                Formal study of abstract structures, number theory, and linear algebra. This mathematical rigour informs my approach to encryption, data structures, and computational optimization.
+                            </p>
+<ul class="space-y-2 font-mono text-xs uppercase tracking-wider text-outline">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span> Discrete Structures</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span> Cryptographic Theory</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary"></span> Statistical Analysis</li>
+</ul>
+</div>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 border-t border-neutral-800/30 bg-neutral-950 flex flex-col md:flex-row justify-between items-end p-12 md:p-16">
+<div class="flex flex-col gap-6">
+<span class="font-['Space_Grotesk'] font-black text-neutral-50 text-4xl tracking-tighter">TB</span>
+<p class="font-['DM_Serif_Display'] italic text-lg text-neutral-400">Archiving the evolution of digital craft.</p>
+</div>
+<div class="flex flex-col items-end gap-8 mt-12 md:mt-0">
+<nav class="flex gap-8">
+<a class="text-neutral-500 font-mono text-xs uppercase tracking-widest hover:text-orange-400 transition-all" href="#">Archive</a>
+<a class="text-neutral-500 font-mono text-xs uppercase tracking-widest hover:text-orange-400 transition-all" href="#">LinkedIn</a>
+<a class="text-neutral-500 font-mono text-xs uppercase tracking-widest hover:text-orange-400 transition-all" href="#">GitHub</a>
+</nav>
+<span class="text-neutral-600 font-mono text-[10px] uppercase tracking-tighter">© 2024 THE OBSIDIAN SCHOLAR. ALL RIGHTS RESERVED.</span>
+</div>
+</footer>
+</body></html>

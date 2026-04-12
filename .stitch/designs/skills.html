@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#201f1f",
+                      "on-secondary": "#452b00",
+                      "inverse-primary": "#aa3600",
+                      "primary-container": "#c1440e",
+                      "surface-container-highest": "#353534",
+                      "on-primary-fixed": "#390c00",
+                      "outline-variant": "#59413a",
+                      "on-primary": "#5c1900",
+                      "on-tertiary-fixed": "#231a13",
+                      "surface-container-lowest": "#0e0e0e",
+                      "primary-fixed-dim": "#ffb59c",
+                      "tertiary-fixed": "#f1dfd4",
+                      "on-tertiary": "#392e27",
+                      "inverse-on-surface": "#313030",
+                      "on-secondary-fixed": "#291800",
+                      "on-primary-container": "#ffeee9",
+                      "on-secondary-container": "#4f3100",
+                      "on-secondary-fixed-variant": "#633f00",
+                      "surface-variant": "#353534",
+                      "on-primary-fixed-variant": "#822800",
+                      "surface-bright": "#3a3939",
+                      "surface-container-high": "#2a2a2a",
+                      "surface-tint": "#ffb59c",
+                      "tertiary-container": "#786b63",
+                      "outline": "#a88a81",
+                      "error": "#ffb4ab",
+                      "on-error-container": "#ffdad6",
+                      "on-background": "#e5e2e1",
+                      "on-surface": "#e5e2e1",
+                      "surface-container-low": "#1c1b1b",
+                      "inverse-surface": "#e5e2e1",
+                      "secondary-container": "#dc9100",
+                      "primary": "#ffb59c",
+                      "on-tertiary-fixed-variant": "#50453d",
+                      "on-surface-variant": "#e1bfb5",
+                      "on-tertiary-container": "#ffeee4",
+                      "on-error": "#690005",
+                      "surface-dim": "#131313",
+                      "tertiary": "#d4c3b9",
+                      "surface": "#131313",
+                      "error-container": "#93000a",
+                      "secondary-fixed-dim": "#ffb955",
+                      "tertiary-fixed-dim": "#d4c3b9",
+                      "primary-fixed": "#ffdbcf",
+                      "secondary-fixed": "#ffddb4",
+                      "background": "#131313",
+                      "secondary": "#ffb955"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0px",
+                      "lg": "0px",
+                      "xl": "0px",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Space Grotesk"],
+                      "body": ["Newsreader"],
+                      "label": ["JetBrains Mono"],
+                      "mono": ["JetBrains Mono"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .kente-pattern {
+            background-color: #0D0D0D;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%23D4A017' fill-opacity='0.06' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar Component -->
+<header class="fixed top-0 w-full z-50 h-20 bg-[#131313]/70 backdrop-blur-md flex justify-between items-center px-12 mx-auto">
+<div class="text-3xl font-bold tracking-tighter text-[#C1440E]">TB</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-[#5C5048] font-mono text-xs tracking-widest hover:text-[#F5A623] hover:bg-[#1C1B1B] transition-all duration-300 active:scale-95" href="#">About</a>
+<a class="text-[#5C5048] font-mono text-xs tracking-widest hover:text-[#F5A623] hover:bg-[#1C1B1B] transition-all duration-300 active:scale-95" href="#">Projects</a>
+<a class="text-[#C1440E] border-b-4 border-[#C1440E] pb-1 font-bold font-mono text-xs tracking-widest active:scale-95" href="#">Skills</a>
+<a class="text-[#5C5048] font-mono text-xs tracking-widest hover:text-[#F5A623] hover:bg-[#1C1B1B] transition-all duration-300 active:scale-95" href="#">Contact</a>
+</nav>
+<button class="bg-[#C1440E] text-[#F0EBE3] px-6 py-2 font-headline font-bold uppercase text-sm tracking-widest active:scale-95 transition-all duration-300 hover:bg-[#F5A623]">
+            Hire Me
+        </button>
+</header>
+<main class="min-h-screen pt-32 pb-24 kente-pattern px-12">
+<!-- Section Header -->
+<div class="mb-20 border-l-4 border-[#C1440E] pl-6">
+<span class="font-mono text-sm tracking-widest text-[#5C5048] block mb-2 uppercase">05 / Skills</span>
+<h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tighter text-[#F0EBE3] uppercase">The Stack</h1>
+</div>
+<!-- Skills Grid (Flat 4-column geometric layout) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-0 gap-y-12">
+<!-- Column 1: LANGUAGES -->
+<div class="flex flex-col space-y-8 lg:pr-8 border-l border-[#2A2A2A] lg:border-l-0">
+<div class="relative pb-4">
+<h2 class="font-headline text-xl font-semibold text-[#C1440E] tracking-widest uppercase">LANGUAGES</h2>
+<div class="absolute bottom-0 left-0 w-12 h-[2px] bg-[#C1440E]"></div>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="px-3 py-1.5 font-mono text-[10px] bg-[#1A1A1A] border border-[#2A2A2A] text-[#F5A623] rounded-[4px] tracking-widest flex items-center gap-2">
+<span class="w-1 h-3 bg-[#C1440E]"></span> PYTHON
+                    </span>
+<span class="px-3 py-1.5 font-mono text-[10px] bg-[#1A1A1A] border border-[#2A2A2A] text-[#F0EBE3] rounded-[4px] tracking-widest flex items-center gap-2">
+<span class="w-1 h-3 bg-[#C1440E]"></span> JAVASCRIPT/TYPESCRIPT
+                    </span>
+<span class="px-3 py-1.5 font-mono text-[10px] bg-[#1A1A1A] border border-[#2A2A2A] text-[#F0EBE3] rounded-[4px] tracking-widest flex items-center gap-2">
+<span class="w-1 h-3 bg-[#C1440E]"></span> GO
+                    </span>
+<span class="px-3 py-1.5 font-mono text-[10px] bg-[#1A1A1A] border border-[#2A2A2A] text-[#F0EBE3] rounded-[4px] tracking-widest flex items-center gap-2">
+<span class="w-1 h-3 bg-[#C1440E]"></span> SQL
+                    </span>
+</div>
+</div>
+<!-- Column 2: FRAMEWORKS -->
+<div class="flex flex-col space-y-8 lg:px-8 border-l border-[#2A2A2A]">
+<div class="relative pb-4">
+<h2 class="font-headline text-xl font-semibold text-[#C1440E] tracking-widest uppercase">FRAMEWORKS</h2>
+<div class="absolute bottom-0 left-0 w-12 h-[2px] bg-[#C1440E]"></div>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="px-3 py-1.5 font-mono text-[10px] bg-[#1A1A1A] border border-[#2A2A2A] text-[#F5A623] rounded-[4px] tracking-widest flex items-center gap-2">
+<span class="w-1 h-3 bg-[#C1440E]"></span> REACT
+                    </span>
+<span class="px-3 py-1.5 font-mono text-[10px] bg-[#1A1A1A] border border-[#2A2A2A] text-[#F0EBE3] rounded-[4px] tracking-widest flex items-center gap-2">
+<span class="w-1 h-3 bg-[#C1440E]"></span> NEXT.JS
+                    </span>
+<span class="px-3 py-1.5 font-mono text-[10px] bg-[#1A1A1A] border border-[#2A2A2A] text-[#F0EBE3] rounded-[4px] tracking-widest flex items-center gap-2">
+<span class="w-1 h-3 bg-[#C1440E]"></span> NODE.JS
+                    </span>
+<span class="px-3 py-1.5 font-mono text-[10px] bg-[#1A1A1A] border border-[#2A2A2A] text-[#F0EBE3] rounded-[4px] tracking-widest flex items-center gap-2">
+<span class="w-1 h-3 bg-[#C1440E]"></span> FASTAPI
+                    </span>
+<span class="px-3 py-1.5 font-mono text-[10px] bg-[#1A1A1A] border border-[#2A2A2A] text-[#F0EBE3] rounded-[4px] tracking-widest flex items-center gap-2">
+<span class="w-1 h-3 bg-[#C1440E]"></span> EXPRESS
+                    </span>
+</div>
+</div>
+<!-- Column 3: TOOLS -->
+<div class="flex flex-col space-y-8 lg:px-8 border-l border-[#2A2A2A]">
+<div class="relative pb-4">
+<h2 class="font-headline text-xl font-semibold text-[#C1440E] tracking-widest uppercase">TOOLS</h2>
+<div class="absolute bottom-0 left-0 w-12 h-[2px] bg-[#C1440E]"></div>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="px-3 py-1.5 font-mono text-[10px] bg-[#1A1A1A] border border-[#2A2A2A] text-[#F0EBE3] rounded-[4px] tracking-widest flex items-center gap-2">
+<span class="w-1 h-3 bg-[#C1440E]"></span> DOCKER
+                    </span>
+<span class="px-3 py-1.5 font-mono text-[10px] bg-[#1A1A1A] border border-[#2A2A2A] text-[#F0EBE3] rounded-[4px] tracking-widest flex items-center gap-2">
+<span class="w-1 h-3 bg-[#C1440E]"></span> GIT
+                    </span>
+<span class="px-3 py-1.5 font-mono text-[10px] bg-[#1A1A1A] border border-[#2A2A2A] text-[#F0EBE3] rounded-[4px] tracking-widest flex items-center gap-2">
+<span class="w-1 h-3 bg-[#C1440E]"></span> POSTGRESQL
+                    </span>
+<span class="px-3 py-1.5 font-mono text-[10px] bg-[#1A1A1A] border border-[#2A2A2A] text-[#F0EBE3] rounded-[4px] tracking-widest flex items-center gap-2">
+<span class="w-1 h-3 bg-[#C1440E]"></span> REDIS
+                    </span>
+<span class="px-3 py-1.5 font-mono text-[10px] bg-[#1A1A1A] border border-[#2A2A2A] text-[#F0EBE3] rounded-[4px] tracking-widest flex items-center gap-2">
+<span class="w-1 h-3 bg-[#C1440E]"></span> AWS
+                    </span>
+</div>
+</div>
+<!-- Column 4: PRACTICES -->
+<div class="flex flex-col space-y-8 lg:pl-8 border-l border-[#2A2A2A]">
+<div class="relative pb-4">
+<h2 class="font-headline text-xl font-semibold text-[#C1440E] tracking-widest uppercase">PRACTICES</h2>
+<div class="absolute bottom-0 left-0 w-12 h-[2px] bg-[#C1440E]"></div>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="px-3 py-1.5 font-mono text-[10px] bg-[#1A1A1A] border border-[#2A2A2A] text-[#F0EBE3] rounded-[4px] tracking-widest flex items-center gap-2">
+<span class="w-1 h-3 bg-[#C1440E]"></span> TDD
+                    </span>
+<span class="px-3 py-1.5 font-mono text-[10px] bg-[#1A1A1A] border border-[#2A2A2A] text-[#F0EBE3] rounded-[4px] tracking-widest flex items-center gap-2">
+<span class="w-1 h-3 bg-[#C1440E]"></span> CI/CD
+                    </span>
+<span class="px-3 py-1.5 font-mono text-[10px] bg-[#1A1A1A] border border-[#2A2A2A] text-[#F0EBE3] rounded-[4px] tracking-widest flex items-center gap-2">
+<span class="w-1 h-3 bg-[#C1440E]"></span> REST APIS
+                    </span>
+<span class="px-3 py-1.5 font-mono text-[10px] bg-[#1A1A1A] border border-[#2A2A2A] text-[#F0EBE3] rounded-[4px] tracking-widest flex items-center gap-2">
+<span class="w-1 h-3 bg-[#C1440E]"></span> SYSTEM DESIGN
+                    </span>
+<span class="px-3 py-1.5 font-mono text-[10px] bg-[#1A1A1A] border border-[#2A2A2A] text-[#F0EBE3] rounded-[4px] tracking-widest flex items-center gap-2">
+<span class="w-1 h-3 bg-[#C1440E]"></span> AGILE
+                    </span>
+</div>
+</div>
+</div>
+<!-- Asymmetric Technical Insight Module -->
+<section class="mt-32 grid grid-cols-12 gap-0 border-t border-[#2A2A2A] pt-12">
+<div class="col-span-12 lg:col-span-4 space-y-6">
+<span class="font-mono text-[10px] text-[#5C5048] tracking-widest uppercase block underline decoration-[#C1440E] decoration-2">Technical Philosophy</span>
+<p class="font-body italic text-2xl text-[#F0EBE3] leading-relaxed max-w-sm">
+                    "Precision is not just about writing code; it's about architecting systems that resist entropy."
+                </p>
+<div class="flex gap-4 items-center pt-4">
+<div class="w-12 h-1 bg-[#C1440E]"></div>
+<span class="font-mono text-[10px] text-[#5C5048] uppercase tracking-widest">Core Directive: Scalability</span>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-8 mt-12 lg:mt-0">
+<div class="bg-[#0E0E0E] p-8 border-l-4 border-[#C1440E]">
+<div class="flex justify-between items-center mb-6">
+<span class="font-mono text-xs text-[#F5A623] tracking-widest">ENCRYPTION_STATUS: SECURE</span>
+<span class="font-mono text-xs text-[#5C5048]">v4.0.2 // STACK_ARCHIVE</span>
+</div>
+<p class="text-[#F0EBE3] opacity-80 leading-loose text-lg">
+                        My development methodology leverages high-performance backends with modern frontend architectures. I prioritize <strong>Type Safety</strong> across the full stack while maintaining a <strong>Brutalist</strong> approach to UI/UX, ensuring that every interaction is intentional and every component serves a tactical purpose.
+                    </p>
+<div class="mt-8 flex gap-8">
+<div class="flex flex-col">
+<span class="font-mono text-[10px] text-[#5C5048] uppercase tracking-tighter">Uptime</span>
+<span class="font-headline text-xl text-[#F0EBE3]">99.99%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-mono text-[10px] text-[#5C5048] uppercase tracking-tighter">Coverage</span>
+<span class="font-headline text-xl text-[#F0EBE3]">94%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-mono text-[10px] text-[#5C5048] uppercase tracking-tighter">Velocity</span>
+<span class="font-headline text-xl text-[#F0EBE3]">MAX</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full py-12 px-12 border-t-4 border-[#C1440E] bg-[#0E0E0E] flex flex-col md:flex-row justify-between items-end gap-8">
+<div class="flex flex-col gap-4">
+<div class="text-lg font-black text-[#F0EBE3]">TB ARCHIVE</div>
+<div class="font-mono text-[10px] tracking-widest uppercase text-[#5C5048]">
+                © 2024 TB ARCHIVE. ALL RIGHTS RESERVED. COORDINATES: 40.7128° N, 74.0060° W
+            </div>
+</div>
+<div class="flex gap-8">
+<a class="font-mono text-[10px] tracking-widest uppercase text-[#5C5048] hover:text-[#F5A623] underline decoration-2 transition-all" href="#">LinkedIn</a>
+<a class="font-mono text-[10px] tracking-widest uppercase text-[#5C5048] hover:text-[#F5A623] underline decoration-2 transition-all" href="#">GitHub</a>
+<a class="font-mono text-[10px] tracking-widest uppercase text-[#5C5048] hover:text-[#F5A623] underline decoration-2 transition-all" href="#">Twitter</a>
+<a class="font-mono text-[10px] tracking-widest uppercase text-[#5C5048] hover:text-[#F5A623] underline decoration-2 transition-all" href="#">Instagram</a>
+</div>
+</footer>
+</body></html>

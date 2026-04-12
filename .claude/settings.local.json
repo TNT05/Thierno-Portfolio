@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rtk ls:*)",
+      "mcp__stitch__list_projects",
+      "mcp__stitch__create_project",
+      "Skill(stitch-design)",
+      "Skill(stitch-design:*)",
+      "mcp__stitch__get_project",
+      "mcp__stitch__generate_screen_from_text",
+      "mcp__stitch__list_screens",
+      "Skill(react-components)",
+      "Bash(cp \"C:/Users/Thierno.I Barry/.claude/skills/react-components/scripts/fetch-stitch.sh\" \"C:/Users/Thierno.I Barry/Desktop/thierno-portfolio/scripts/fetch-stitch.sh\")",
+      "Bash(cp \"C:/Users/Thierno.I Barry/.claude/skills/react-components/scripts/validate.js\" \"C:/Users/Thierno.I Barry/Desktop/thierno-portfolio/scripts/validate.js\")",
+      "mcp__stitch__get_screen"
+    ]
+  }
+}

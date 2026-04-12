@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700;900&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=JetBrains+Mono:wght@400;700&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#313030",
+                        "surface-container": "#201f1f",
+                        "surface": "#131313",
+                        "on-background": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "on-tertiary-container": "#ffefe0",
+                        "surface-container-high": "#2a2a2a",
+                        "on-tertiary-fixed": "#291800",
+                        "inverse-surface": "#e5e2e1",
+                        "background": "#131313",
+                        "secondary-fixed": "#ffdbc9",
+                        "secondary-fixed-dim": "#ffb68c",
+                        "on-tertiary": "#452b00",
+                        "outline-variant": "#59413a",
+                        "on-secondary": "#532200",
+                        "on-secondary-fixed": "#321200",
+                        "on-secondary-container": "#ffc9ac",
+                        "tertiary-container": "#986300",
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "primary-fixed-dim": "#ffb59c",
+                        "on-error": "#690005",
+                        "primary": "#ffb59c",
+                        "outline": "#a88a81",
+                        "on-primary": "#5c1900",
+                        "error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ffb955",
+                        "surface-tint": "#ffb59c",
+                        "surface-container-highest": "#353534",
+                        "surface-dim": "#131313",
+                        "on-primary-container": "#ffeee9",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-fixed": "#390c00",
+                        "on-surface-variant": "#e1bfb5",
+                        "tertiary": "#ffb955",
+                        "surface-variant": "#353534",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed-variant": "#763400",
+                        "secondary": "#ffb68c",
+                        "on-primary-fixed-variant": "#822800",
+                        "primary-fixed": "#ffdbcf",
+                        "primary-container": "#c1440e",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#974400",
+                        "inverse-primary": "#aa3600",
+                        "surface-bright": "#3a3939",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#ffddb4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Newsreader"],
+                        "label": ["Inter"],
+                        "mono": ["JetBrains Mono"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .kente-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0l20 20-20 20L0 20z' fill='%23D4A017' fill-opacity='0.12' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-white overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-900/60 backdrop-blur-xl flex justify-between items-center px-8 py-6 w-full max-w-none">
+<div class="text-2xl font-black text-white font-['Space_Grotesk'] tracking-tighter uppercase">TB</div>
+<div class="hidden md:flex gap-10">
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-stone-400 hover:text-white transition-all duration-300 scale-95 active:scale-90" href="#">Work</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-orange-600 dark:text-orange-500 border-b-2 border-orange-700 pb-1 scale-95 active:scale-90" href="#">Projects</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-stone-400 hover:text-white transition-all duration-300 scale-95 active:scale-90" href="#">Story</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-stone-400 hover:text-white transition-all duration-300 scale-95 active:scale-90" href="#">Labs</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-stone-400 hover:text-white transition-all duration-300 scale-95 active:scale-90" href="#">Contact</a>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</div>
+</nav>
+<main class="relative pt-24 min-h-screen">
+<!-- Sticky Section Header -->
+<header class="sticky top-28 left-8 z-10 px-8 w-fit">
+<h2 class="font-mono text-xs tracking-[0.3em] uppercase text-[#5C5048] flex items-center gap-4">
+<span>03 / Projects</span>
+<span class="w-24 h-[1px] bg-outline-variant/30"></span>
+</h2>
+</header>
+<!-- Horizontal Scroll Rail Container -->
+<section class="relative w-full h-[870px] mt-12 flex flex-col justify-center">
+<div class="kente-overlay absolute inset-0 pointer-events-none"></div>
+<div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar w-full px-8 md:px-24 gap-12">
+<!-- Card 1: FinTrack Dashboard -->
+<div class="snap-center flex-shrink-0 w-full lg:w-[90vw] h-[716px] flex flex-col md:flex-row bg-surface-container-low relative group overflow-hidden">
+<!-- Left: Content Panel (45%) -->
+<div class="w-full md:w-[45%] h-full p-12 lg:p-20 flex flex-col justify-center relative z-10">
+<span class="font-headline font-black text-primary-container text-8xl opacity-10 absolute top-10 left-10 select-none">01</span>
+<div class="relative">
+<h3 class="font-headline text-5xl lg:text-7xl font-bold tracking-tighter text-on-surface mb-6 leading-none">
+                                FinTrack Dashboard
+                            </h3>
+<p class="font-body text-xl lg:text-2xl text-on-surface-variant italic mb-10 leading-relaxed max-w-md">
+                                Reimagining institutional asset management through a brutalist, data-first architectural interface.
+                            </p>
+<div class="flex flex-wrap gap-3 mb-12">
+<span class="font-mono text-[10px] tracking-widest px-4 py-2 bg-surface-container-highest text-on-tertiary-container uppercase border border-outline-variant/10">REACT</span>
+<span class="font-mono text-[10px] tracking-widest px-4 py-2 bg-surface-container-highest text-on-tertiary-container uppercase border border-outline-variant/10">NODE.JS</span>
+<span class="font-mono text-[10px] tracking-widest px-4 py-2 bg-surface-container-highest text-on-tertiary-container uppercase border border-outline-variant/10">POSTGRESQL</span>
+</div>
+<a class="inline-flex items-center gap-4 text-primary font-headline font-bold uppercase tracking-widest group/link" href="#">
+                                View Case Study
+                                <span class="material-symbols-outlined group-hover/link:translate-x-2 transition-transform duration-300">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Right: Project Mockup (55%) -->
+<div class="w-full md:w-[55%] h-full bg-surface-container-highest relative group-hover:scale-[1.02] transition-transform duration-700 ease-out">
+<img alt="FinTrack Dashboard UI" class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-500" data-alt="Modern dark mode financial dashboard with complex data visualizations, neon orange accents, and sleek typography on a high-end interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh-pNWIyr_vFqI2RU6m01endp1yTZSEe78lSP6bixcUg5Sbk29ww5MT6x4vlmUZ3vW4FDLlQddYQvEqz8epEWJLxv4M1hqLTU_lh0_2ah7ORxG32kl0KgooTn2yNpA4qk3iNJtAMyqDXrJYGW_3nqJZGKa9TKzYVcGgJ1AymIpXU-EZccNWnTXvOVZhKuiLPOwzVH-oMcBaQVTezF64n9DJfjVTVz9dZ_mAuBk9WmCku1BHm_prfBs2rtfcdPmAkTDP-BqlJoJoyY"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-low via-transparent to-transparent md:block hidden"></div>
+</div>
+</div>
+<!-- Card 2: Placeholder for Scroll Context -->
+<div class="snap-center flex-shrink-0 w-full lg:w-[90vw] h-[716px] flex flex-col md:flex-row bg-surface-container-lowest relative group">
+<div class="w-full md:w-[45%] h-full p-12 lg:p-20 flex flex-col justify-center">
+<span class="font-headline font-black text-primary-container text-8xl opacity-10 absolute top-10 left-10 select-none">02</span>
+<h3 class="font-headline text-5xl lg:text-7xl font-bold tracking-tighter text-on-surface mb-6 leading-none">Ether Archive</h3>
+<p class="font-body text-xl lg:text-2xl text-on-surface-variant italic mb-10 leading-relaxed max-w-md">An experimental decentralized museum platform utilizing volumetric rendering.</p>
+<div class="flex gap-3 mb-12">
+<span class="font-mono text-[10px] tracking-widest px-4 py-2 bg-surface-container-highest text-on-tertiary-container uppercase">WEBGL</span>
+<span class="font-mono text-[10px] tracking-widest px-4 py-2 bg-surface-container-highest text-on-tertiary-container uppercase">THREE.JS</span>
+</div>
+<a class="inline-flex items-center gap-4 text-primary font-headline font-bold uppercase tracking-widest group/link" href="#">
+                            View Case Study
+                            <span class="material-symbols-outlined group-hover/link:translate-x-2 transition-transform duration-300">arrow_right_alt</span>
+</a>
+</div>
+<div class="w-full md:w-[55%] h-full bg-surface-container-highest relative overflow-hidden">
+<img alt="Ether Archive Concept" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Abstract 3D digital art installation with flowing liquid metallic shapes and ethereal orange glowing light in a dark space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7uEKg5m0UI4IsMIEJfttJMU42E261cf3W6zDToo5J39YcLMsej-pJhO8khYweAS5n_FQOfWvr3eoz3y1gL7T-5MTvBnHKK8tGJW8KVeO6gNRjE-p5c3HRcDvao5Ah-5dSl74fIKXRLjo46R45mdval0n88eXSwdjOk0luYLKbJI1WqoudKpRwik3Cy5iwSayz_pwpqKftG5rOyzS1ROGNxzp3bfYu513XxdOuIIira7wXqFd5Mkd1gsOX_V6YRSsLlPmJ4k7CdW0"/>
+</div>
+</div>
+</div>
+<!-- Footer Elements within Section -->
+<div class="mt-16 flex flex-col items-center gap-8">
+<!-- Dot Pagination -->
+<div class="flex gap-4">
+<span class="w-2.5 h-2.5 bg-primary rounded-full"></span>
+<span class="w-2.5 h-2.5 bg-surface-container-highest rounded-full hover:bg-outline transition-colors cursor-pointer"></span>
+<span class="w-2.5 h-2.5 bg-surface-container-highest rounded-full hover:bg-outline transition-colors cursor-pointer"></span>
+</div>
+<!-- Animated Scroll Arrow -->
+<div class="flex items-center gap-4 text-outline text-xs font-mono tracking-[0.4em] uppercase">
+<span>Swipe</span>
+<div class="flex items-center overflow-hidden w-12">
+<span class="material-symbols-outlined text-primary animate-pulse">keyboard_double_arrow_right</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-stone-800/15 bg-stone-950 flex flex-col md:flex-row justify-between items-center px-12 py-8 w-full">
+<div class="text-stone-200 font-bold font-mono text-[10px] tracking-widest mb-4 md:mb-0">
+            TB / THE KINETIC ARCHIVIST
+        </div>
+<div class="text-stone-500 font-mono text-[10px] uppercase tracking-widest">
+            © 2024 THE KINETIC ARCHIVIST. ALL RIGHTS RESERVED.
+        </div>
+<div class="flex gap-8 mt-4 md:mt-0">
+<a class="text-stone-600 hover:text-white transition-colors duration-200 font-mono text-[10px] tracking-widest" href="#">INSTAGRAM</a>
+<a class="text-stone-600 hover:text-white transition-colors duration-200 font-mono text-[10px] tracking-widest" href="#">TWITTER</a>
+<a class="text-stone-600 hover:text-white transition-colors duration-200 font-mono text-[10px] tracking-widest" href="#">LINKEDIN</a>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ffb4ab",
+                    "surface-bright": "#3a3939",
+                    "on-background": "#e5e2e1",
+                    "background": "#131313",
+                    "surface-tint": "#ffb59c",
+                    "on-surface-variant": "#e1bfb5",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary-container": "#ffefe0",
+                    "surface-container-high": "#2a2a2a",
+                    "primary-fixed-dim": "#ffb59c",
+                    "outline-variant": "#59413a",
+                    "on-tertiary-fixed": "#291800",
+                    "outline": "#a88a81",
+                    "primary": "#ffb59c",
+                    "inverse-on-surface": "#313030",
+                    "secondary": "#ffb68c",
+                    "on-tertiary": "#452b00",
+                    "surface-variant": "#353534",
+                    "on-tertiary-fixed-variant": "#633f00",
+                    "secondary-fixed-dim": "#ffb68c",
+                    "inverse-surface": "#e5e2e1",
+                    "on-primary": "#5c1900",
+                    "secondary-container": "#974400",
+                    "surface-dim": "#131313",
+                    "on-secondary-fixed-variant": "#763400",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-error": "#690005",
+                    "on-secondary-container": "#ffc9ac",
+                    "on-primary-container": "#ffeee9",
+                    "on-secondary-fixed": "#321200",
+                    "tertiary": "#ffb955",
+                    "surface-container-highest": "#353534",
+                    "surface": "#131313",
+                    "inverse-primary": "#aa3600",
+                    "tertiary-container": "#986300",
+                    "tertiary-fixed-dim": "#ffb955",
+                    "surface-container": "#201f1f",
+                    "on-surface": "#e5e2e1",
+                    "error-container": "#93000a",
+                    "surface-container-low": "#1c1b1b",
+                    "primary-fixed": "#ffdbcf",
+                    "secondary-fixed": "#ffdbc9",
+                    "on-secondary": "#532200",
+                    "on-primary-fixed-variant": "#822800",
+                    "on-primary-fixed": "#390c00",
+                    "tertiary-fixed": "#ffddb4",
+                    "primary-container": "#c1440e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Newsreader"],
+                    "label": ["Space Grotesk"],
+                    "mono": ["JetBrains Mono"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .kente-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h30v30H0zM30 30h30v30H30z' fill='%23c1440e' fill-opacity='0.05'/%3E%3Cpath d='M30 0h30v30H30zM0 30h30v30H0z' fill='%23ffb59c' fill-opacity='0.02'/%3E%3C/svg%3E");
+        }
+        .text-kern-tight { letter-spacing: -0.04em; }
+    </style>
+</head>
+<body class="bg-[#0D0D0D] text-on-surface selection:bg-primary-container selection:text-white min-h-screen font-body overflow-x-hidden kente-pattern">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-neutral-900/80 backdrop-blur-xl flex justify-between items-center px-12 h-20 max-w-full mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-orange-500 font-headline uppercase">TB</div>
+<div class="hidden md:flex items-center gap-10 font-mono tracking-tight text-sm uppercase">
+<a class="text-neutral-400 hover:text-orange-100 transition-colors" href="#">About</a>
+<a class="text-neutral-400 hover:text-orange-100 transition-colors" href="#">Projects</a>
+<a class="text-neutral-400 hover:text-orange-100 transition-colors" href="#">Skills</a>
+<a class="text-neutral-400 hover:text-orange-100 transition-colors" href="#">Contact</a>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+</nav>
+<!-- Main Content Shell -->
+<main class="relative pt-32 pb-24 px-6 md:px-12 lg:px-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-7xl mx-auto">
+<!-- Left Column: Portrait -->
+<div class="lg:col-span-5 relative group">
+<!-- Subtle Kente Stripe -->
+<div class="absolute -left-4 top-10 bottom-10 w-2 bg-primary-container z-10 opacity-80"></div>
+<div class="relative overflow-hidden bg-surface-container-low aspect-[3/4]">
+<img alt="Portrait of a professional" class="w-full h-full object-cover mix-blend-luminosity grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Moody cinematic portrait of a Guinean-Canadian man with confident expression, warm amber color grade, soft shadows, editorial photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsmrmpaTjYx6IshGi12pqjSRAoeOXTpfRaRQYQ921hYDxfGl7COHVEyv3bAELTEXsNd4Bgx8TBcUM879Sqp5nM8k9G_nYhNZHsDOETnIWVCj8dol5GbishBM2AOvXnaEA9vfkA-ET8HeY89TArbxH0uvJhC9Q-f0C9xj-COQbJH6bvBuRZAxvG-xl95-JHALolCvP1FIPYQkgL8lzVhsVIQ-c8aCkgyEJQPDRFGUP2luceFdLZrT3_blpAb-780LwPBKvPch1td8s"/>
+<!-- Warm Amber Overlay -->
+<div class="absolute inset-0 bg-primary-container/20 mix-blend-multiply pointer-events-none"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-60"></div>
+</div>
+<!-- Technical Detail Marker -->
+<div class="absolute -bottom-6 -right-6 hidden lg:block bg-surface-container-high p-6 border-l-4 border-primary-container">
+<p class="font-mono text-[10px] tracking-[0.2em] text-outline uppercase">Coordinate</p>
+<p class="font-headline font-bold text-lg text-primary">45.5017° N, 73.5673° W</p>
+</div>
+</div>
+<!-- Right Column: Narrative Content -->
+<div class="lg:col-span-7 flex flex-col pt-12 lg:pt-20">
+<header class="mb-8">
+<span class="font-mono text-sm tracking-[0.3em] text-primary-container uppercase">02 / About</span>
+<h1 class="font-headline text-6xl md:text-8xl font-bold text-kern-tight text-on-surface mt-6 leading-none">
+                        Engineer.<br/>
+                        Athlete.<br/>
+                        Builder.
+                    </h1>
+</header>
+<div class="w-24 h-1 bg-primary-container mb-12"></div>
+<div class="max-w-xl">
+<!-- Pull Quote -->
+<blockquote class="font-body italic text-3xl md:text-4xl text-primary mb-12 leading-tight">
+                        "Born in Guinea, raised in Canada — I build like I compete."
+                    </blockquote>
+<!-- Body Content -->
+<div class="space-y-8 font-body text-xl md:text-2xl text-on-surface-variant leading-relaxed font-light">
+<p>
+                            As a Canadian software engineer of Guinean heritage, my work exists at the intersection of high-performance technical architecture and profound cultural identity. I approach every codebase with the same tactical precision I honed as a competitive athlete.
+                        </p>
+<p>
+                            To me, building is not just about execution—it is about lineage. It is about translating the resilience of my West African roots into digital systems that are as enduring as they are elegant. My focus remains unwavering: creating products that resonate with human purpose and technical excellence.
+                        </p>
+</div>
+<!-- Action Link -->
+<div class="mt-16 group inline-flex items-center gap-4 cursor-pointer">
+<span class="font-headline font-bold uppercase tracking-widest text-sm text-primary">Download Manifest</span>
+<div class="h-[1px] w-12 bg-primary transition-all duration-300 group-hover:w-20"></div>
+<span class="material-symbols-outlined text-primary">north_east</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-neutral-800/20 bg-neutral-950 flex flex-col md:flex-row justify-between items-center px-12 py-16">
+<div class="font-mono text-[10px] tracking-widest uppercase text-neutral-500">
+            © 2024 TB. ALL RIGHTS RESERVED.
+        </div>
+<div class="flex gap-8 mt-8 md:mt-0 font-mono text-[10px] tracking-widest uppercase">
+<a class="text-neutral-500 hover:text-orange-400 transition-colors" href="#">Twitter</a>
+<a class="text-neutral-500 hover:text-orange-400 transition-colors" href="#">LinkedIn</a>
+<a class="text-neutral-500 hover:text-orange-400 transition-colors" href="#">GitHub</a>
+</div>
+</footer>
+<!-- Fixed Glass Decoration Bottom -->
+<div class="fixed bottom-0 left-0 w-full h-[1px] bg-primary-container/30 z-50"></div>
+</body></html>

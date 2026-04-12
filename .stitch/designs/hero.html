@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=JetBrains+Mono:wght@100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#ffb59c",
+                    "error": "#ffb4ab",
+                    "surface-dim": "#131313",
+                    "background": "#131313",
+                    "secondary-fixed-dim": "#ffb68c",
+                    "on-primary": "#5c1900",
+                    "error-container": "#93000a",
+                    "on-tertiary": "#452b00",
+                    "surface-bright": "#3a3939",
+                    "on-primary-container": "#ffeee9",
+                    "on-error": "#690005",
+                    "on-secondary": "#532200",
+                    "surface-container": "#201f1f",
+                    "surface-container-low": "#1c1b1b",
+                    "on-primary-fixed-variant": "#822800",
+                    "secondary": "#ffb68c",
+                    "secondary-fixed": "#ffdbc9",
+                    "surface-container-high": "#2a2a2a",
+                    "tertiary-fixed": "#ffddb4",
+                    "on-background": "#e5e2e1",
+                    "on-secondary-fixed": "#321200",
+                    "inverse-on-surface": "#313030",
+                    "surface-tint": "#ffb59c",
+                    "primary": "#ffb59c",
+                    "on-surface-variant": "#e1bfb5",
+                    "on-primary-fixed": "#390c00",
+                    "on-tertiary-fixed-variant": "#633f00",
+                    "on-secondary-fixed-variant": "#763400",
+                    "surface-variant": "#353534",
+                    "primary-fixed": "#ffdbcf",
+                    "secondary-container": "#974400",
+                    "surface": "#131313",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary-container": "#ffefe0",
+                    "on-tertiary-fixed": "#291800",
+                    "on-surface": "#e5e2e1",
+                    "outline": "#a88a81",
+                    "tertiary-container": "#986300",
+                    "surface-container-highest": "#353534",
+                    "outline-variant": "#59413a",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-container": "#ffc9ac",
+                    "primary-container": "#c1440e",
+                    "inverse-primary": "#aa3600",
+                    "tertiary": "#ffb955",
+                    "tertiary-fixed-dim": "#ffb955"
+            },
+            "borderRadius": {
+                    "DEFAULT": "4px",
+                    "lg": "8px",
+                    "xl": "12px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Newsreader"],
+                    "label": ["Space Grotesk"],
+                    "mono": ["JetBrains Mono"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-text {
+            font-size: clamp(3rem, 12vw, 10rem);
+            line-height: 0.9;
+        }
+        .warm-radial-glow {
+            background: radial-gradient(circle at 30% 50%, rgba(193, 68, 14, 0.08) 0%, rgba(19, 19, 19, 0) 60%);
+        }
+        .kente-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%23D4A017' fill-opacity='1'/%3E%3C/svg%3E");
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body overflow-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/80 backdrop-blur-xl flex justify-between items-center px-8 py-6 max-w-full mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#FFB59C] font-headline">
+            TB
+        </div>
+<div class="hidden md:flex gap-12 items-center">
+<div class="flex gap-8">
+<a class="font-['Space_Grotesk'] tracking-tight uppercase font-bold text-xs text-[#FFB59C] border-b-2 border-[#C1440E] pb-1 transition-colors duration-300" href="#">WORK</a>
+<a class="font-['Space_Grotesk'] tracking-tight uppercase font-bold text-xs text-[#A8A29E] hover:text-[#FFB59C] transition-colors duration-300" href="#">STORY</a>
+<a class="font-['Space_Grotesk'] tracking-tight uppercase font-bold text-xs text-[#A8A29E] hover:text-[#FFB59C] transition-colors duration-300" href="#">LABS</a>
+<a class="font-['Space_Grotesk'] tracking-tight uppercase font-bold text-xs text-[#A8A29E] hover:text-[#FFB59C] transition-colors duration-300" href="#">CONTACT</a>
+</div>
+<button class="font-['Space_Grotesk'] tracking-tight uppercase font-bold text-xs bg-primary-container text-on-primary-container px-6 py-2 rounded-none hover:scale-95 transition-transform duration-200">
+                RESUME
+            </button>
+</div>
+<!-- Mobile Trigger (Visual placeholder) -->
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+</nav>
+<!-- Main Hero Canvas -->
+<main class="relative h-screen w-full flex items-center overflow-hidden warm-radial-glow">
+<!-- Background Texture (Subtle Kente Overlay) -->
+<div class="absolute inset-0 opacity-[0.02] pointer-events-none kente-pattern"></div>
+<!-- Left Content Section -->
+<section class="relative z-10 px-8 md:px-24 max-w-7xl w-full">
+<div class="mb-6">
+<span class="font-mono text-xs tracking-[0.3em] uppercase text-primary/60">01 / Hero</span>
+</div>
+<h1 class="font-headline font-extrabold kinetic-text tracking-tighter text-on-surface flex flex-col">
+<span class="block">THIERNO</span>
+<span class="block text-primary-container">BARRY</span>
+</h1>
+<div class="mt-8 flex flex-col md:flex-row md:items-end gap-12">
+<div class="max-w-md">
+<p class="text-xl md:text-2xl font-body italic text-on-surface-variant leading-relaxed">
+                        Software Engineer &amp; Builder crafting tactile digital experiences through technical precision and editorial narrative.
+                    </p>
+</div>
+<div class="flex-shrink-0 mb-2">
+<button class="group relative px-8 py-4 bg-transparent border-2 border-primary-container text-primary font-headline font-bold uppercase tracking-widest text-sm hover:bg-primary-container hover:text-on-primary-container transition-all duration-300 flex items-center gap-3">
+                        Explore the work
+                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Decorative Right Band -->
+<aside class="absolute right-0 top-0 h-full w-24 border-l border-outline-variant/10 hidden lg:flex flex-col items-center justify-center py-20 bg-surface-container-low/30 backdrop-blur-sm">
+<div class="absolute inset-0 opacity-10 kente-pattern py-20" style="background-size: 24px 24px;"></div>
+<div class="relative z-10 flex flex-col gap-12">
+<span class="material-symbols-outlined text-primary/40 text-xl" data-icon="adjust">adjust</span>
+<span class="material-symbols-outlined text-primary/40 text-xl" data-icon="architecture">architecture</span>
+<span class="material-symbols-outlined text-primary/40 text-xl" data-icon="grid_view">grid_view</span>
+</div>
+</aside>
+<!-- Bottom Scroll Indicator -->
+<div class="absolute bottom-12 left-8 md:left-24 flex items-center gap-4 group cursor-pointer">
+<div class="w-px h-12 bg-outline-variant/30 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1/2 bg-primary animate-pulse"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-mono text-[10px] tracking-widest uppercase text-on-surface-variant">Scroll</span>
+<span class="material-symbols-outlined text-primary-container animate-bounce" style="font-size: 18px;">expand_more</span>
+</div>
+</div>
+<!-- Social / Metadata Left Side -->
+<div class="absolute left-8 bottom-32 hidden xl:block origin-left -rotate-90">
+<div class="flex gap-8 items-center">
+<a class="font-mono text-[9px] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Github</a>
+<a class="font-mono text-[9px] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="font-mono text-[9px] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Read.cv</a>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 w-full z-40 bg-[#0E0E0E] flex flex-col md:flex-row justify-between items-center px-8 py-4 w-full border-t border-[#3A3939]/15">
+<span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest text-[#A8A29E]">© 2024 ARCHITECT — KINETIC CURATOR</span>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest text-[#A8A29E] hover:text-[#FFB68C] transition-opacity" href="#">GITHUB</a>
+<a class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest text-[#A8A29E] hover:text-[#FFB68C] transition-opacity" href="#">LINKEDIN</a>
+<a class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest text-[#A8A29E] hover:text-[#FFB68C] transition-opacity" href="#">READCV</a>
+</div>
+</footer>
+</body></html>
