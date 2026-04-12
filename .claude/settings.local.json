@@ -12,7 +12,9 @@
       "Skill(react-components)",
       "Bash(cp \"C:/Users/Thierno.I Barry/.claude/skills/react-components/scripts/fetch-stitch.sh\" \"C:/Users/Thierno.I Barry/Desktop/thierno-portfolio/scripts/fetch-stitch.sh\")",
       "Bash(cp \"C:/Users/Thierno.I Barry/.claude/skills/react-components/scripts/validate.js\" \"C:/Users/Thierno.I Barry/Desktop/thierno-portfolio/scripts/validate.js\")",
-      "mcp__stitch__get_screen"
+      "mcp__stitch__get_screen",
+      "Bash(rtk git commit -m ':*)",
+      "Bash(rtk git:*)"
     ]
   }
 }
