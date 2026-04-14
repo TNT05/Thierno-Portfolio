@@ -2,7 +2,7 @@ import { education } from '../data/mockData';
 
 export default function Education() {
   return (
-    <section id="education" className="relative bg-surface-container-lowest py-24 overflow-hidden">
+    <section id="education" className="section-divider relative py-24 overflow-hidden">
       {/* Background kente */}
       <div
         className="absolute inset-0 kente-pattern-subtle pointer-events-none"
@@ -12,7 +12,7 @@ export default function Education() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-16">
         {/* Section label */}
         <p className="font-mono text-xs uppercase tracking-widest text-outline mb-4">
-          08 / Education
+          06 / Education
         </p>
 
         {/* Headline */}

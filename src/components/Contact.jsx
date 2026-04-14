@@ -2,7 +2,7 @@ import { siteData } from '../data/mockData';
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative bg-surface-container-lowest overflow-hidden">
+    <section id="contact" className="section-divider relative overflow-hidden">
       {/* Full kente diamond pattern background */}
       <div
         className="absolute inset-0 kente-pattern pointer-events-none"
@@ -12,10 +12,10 @@ export default function Contact() {
       {/* Main content — fullscreen centered */}
       <div className="relative min-h-screen flex flex-col">
         {/* Top section */}
-        <div className="flex-1 flex flex-col items-center justify-center px-6 py-24 text-center space-y-8">
+        <div className="flex-1 flex flex-col items-center justify-center px-6 md:px-16 py-24 text-center space-y-8">
           {/* Section label */}
           <p className="font-mono text-xs uppercase tracking-widest text-outline">
-            06 / Contact
+            08 / Contact
           </p>
 
           {/* Headline */}

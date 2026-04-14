@@ -2,7 +2,7 @@ import { certifications } from '../data/mockData';
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="relative bg-background py-24 overflow-hidden">
+    <section id="certifications" className="section-divider relative py-24 overflow-hidden">
       {/* Background kente pattern */}
       <div
         className="absolute inset-0 kente-pattern-subtle pointer-events-none"
@@ -12,7 +12,7 @@ export default function Certifications() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-16">
         {/* Section label */}
         <p className="font-mono text-xs uppercase tracking-widest text-outline mb-4">
-          09 / Certifications
+          07 / Certifications
         </p>
 
         {/* Headline */}

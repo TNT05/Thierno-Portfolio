@@ -2,7 +2,7 @@ export default function About() {
 	return (
 		<section
 			id="about"
-			className="relative bg-surface-container-lowest py-24 overflow-hidden"
+			className="section-divider relative py-24 overflow-hidden"
 		>
 			{/* Left kente accent */}
 			<div
