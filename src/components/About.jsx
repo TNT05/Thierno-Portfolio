@@ -1,3 +1,5 @@
+import graduationImg from '../assets/graduation.jpg';
+
 export default function About() {
 	return (
 		<section
@@ -26,7 +28,7 @@ export default function About() {
 							{/* Portrait placeholder with warm overlay */}
 
 							<div className="w-full h-full relative">
-								<img src={'src/assets/graduation.jpg'} alt="Profile" />
+								<img src={graduationImg} alt="Profile" className="w-full h-full object-cover object-top" />
 								<div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-surface-container-lowest opacity-60 z-10" />
 								<div
 									className="absolute inset-0 opacity-20 z-20"
