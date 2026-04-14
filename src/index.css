@@ -655,3 +655,276 @@ body {
     text-shadow: none !important;
   }
 }
+
+/* ==========================================================================
+   EDUCATION SECTION — Elevation Animations
+   ========================================================================== */
+
+/* Card staggered entrance — reuses exp-row-rise keyframe for rhythm parity */
+.edu-card {
+  position: relative;
+  opacity: 0;
+  animation: exp-row-rise 820ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  transition:
+    background-color 320ms ease,
+    box-shadow 360ms ease,
+    border-color 320ms ease,
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+  overflow: hidden;
+  isolation: isolate;
+}
+.edu-card:hover {
+  background-color: rgba(32, 31, 31, 0.92) !important;
+  box-shadow:
+    0 18px 48px -24px rgba(193, 68, 14, 0.45),
+    0 0 0 1px rgba(193, 68, 14, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  transform: translateY(-2px);
+}
+
+/* Decorative corner diamond inside the card (kente nod) */
+.edu-card::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(135deg, rgba(193, 68, 14, 0.55), rgba(255, 185, 85, 0.7));
+  transform: rotate(45deg);
+  opacity: 0.35;
+  transition: opacity 360ms ease, transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+.edu-card:hover::after {
+  opacity: 0.85;
+  transform: rotate(135deg) scale(1.15);
+}
+
+/* Gradient left accent rail (parity with skills-accent-rail) */
+.edu-accent-rail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(193, 68, 14, 0.85) 22%,
+    rgba(255, 185, 85, 0.95) 55%,
+    rgba(193, 68, 14, 0.65) 82%,
+    transparent 100%
+  );
+  animation: skills-accent-pulse 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Institution label — animated underline on hover (reuses skills-underline-draw) */
+.edu-institution {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  transition: color 280ms ease;
+}
+.edu-institution::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 24px;
+  height: 1px;
+  background: linear-gradient(90deg, #c1440e, #ffb955);
+  transform-origin: left center;
+  transition: width 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.edu-card:hover .edu-institution {
+  color: #e1bfb5;
+}
+.edu-card:hover .edu-institution::after {
+  width: 72px;
+}
+
+/* Degree title — terracotta hover glow */
+.edu-degree {
+  transition: text-shadow 360ms ease, color 320ms ease;
+}
+.edu-card:hover .edu-degree {
+  text-shadow: 0 0 32px rgba(193, 68, 14, 0.45);
+}
+
+/* Period — pill badge treatment */
+.edu-period {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border: 1px solid rgba(168, 138, 129, 0.45);
+  border-radius: 9999px;
+  background-color: rgba(14, 14, 14, 0.55);
+  transition:
+    border-color 280ms ease,
+    background-color 280ms ease,
+    color 280ms ease;
+}
+.edu-period::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 9999px;
+  background: #c1440e;
+  box-shadow: 0 0 8px rgba(193, 68, 14, 0.7);
+}
+.edu-card:hover .edu-period {
+  border-color: rgba(193, 68, 14, 0.65);
+  background-color: rgba(193, 68, 14, 0.08);
+  color: #ffeee9;
+}
+
+/* Highlight list items — 6px bullet, hover slide + brighten */
+.edu-highlight {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 0;
+  transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1), color 280ms ease;
+}
+.edu-highlight-dot {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: #c1440e;
+  box-shadow: 0 0 0 0 rgba(193, 68, 14, 0.45);
+  transition: box-shadow 320ms ease, background-color 280ms ease, transform 280ms ease;
+}
+.edu-highlight:hover {
+  transform: translateX(6px);
+  color: #ffeee9;
+}
+.edu-highlight:hover .edu-highlight-dot {
+  background: #ffb955;
+  box-shadow: 0 0 12px 2px rgba(255, 185, 85, 0.5);
+  transform: scale(1.25);
+}
+
+/* Right panel — decorative index + crest composition */
+.edu-index-panel {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(120% 80% at 100% 0%, rgba(193, 68, 14, 0.16), transparent 55%),
+    radial-gradient(140% 100% at 0% 100%, rgba(255, 185, 85, 0.10), transparent 60%),
+    #1c1b1b;
+  transition: border-color 320ms ease, transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.edu-card:hover .edu-index-panel {
+  border-color: rgba(193, 68, 14, 0.45) !important;
+}
+
+/* Large decorative index numeral */
+.edu-index {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 900;
+  font-size: clamp(5rem, 10vw, 8.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 185, 85, 0.85) 0%,
+    rgba(193, 68, 14, 0.65) 55%,
+    rgba(193, 68, 14, 0.15) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  user-select: none;
+  transition: transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.edu-card:hover .edu-index {
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Kente diamond overlay inside right panel */
+.edu-index-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 0L24 12L12 24L0 12Z' fill='none' stroke='%23c1440e' stroke-opacity='0.18' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 28px 28px;
+  opacity: 0.6;
+  pointer-events: none;
+  mask-image: linear-gradient(135deg, rgba(0, 0, 0, 0.85), transparent 75%);
+  -webkit-mask-image: linear-gradient(135deg, rgba(0, 0, 0, 0.85), transparent 75%);
+}
+
+/* Small crest label under the index number */
+.edu-crest-label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.625rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #a88a81;
+}
+.edu-crest-label::before,
+.edu-crest-label::after {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(193, 68, 14, 0.75), transparent);
+}
+
+/* Bottom editorial callout — reuses exp-callout + exp-callout-word */
+.edu-callout {
+  opacity: 0;
+  animation: exp-callout-reveal 1200ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 400ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .edu-card,
+  .edu-callout {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  .edu-callout {
+    opacity: 0.3 !important;
+  }
+  .edu-accent-rail {
+    animation: none !important;
+  }
+  .edu-card,
+  .edu-card:hover,
+  .edu-card::after,
+  .edu-card:hover::after,
+  .edu-institution,
+  .edu-institution::after,
+  .edu-card:hover .edu-institution,
+  .edu-card:hover .edu-institution::after,
+  .edu-degree,
+  .edu-card:hover .edu-degree,
+  .edu-period,
+  .edu-card:hover .edu-period,
+  .edu-highlight,
+  .edu-highlight:hover,
+  .edu-highlight-dot,
+  .edu-highlight:hover .edu-highlight-dot,
+  .edu-index,
+  .edu-card:hover .edu-index,
+  .edu-index-panel,
+  .edu-card:hover .edu-index-panel {
+    transition: none !important;
+    transform: none !important;
+    text-shadow: none !important;
+  }
+}
