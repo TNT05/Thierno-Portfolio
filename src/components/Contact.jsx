@@ -2,23 +2,26 @@ import { siteData } from '../data/mockData';
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative bg-surface-container-lowest overflow-hidden">
+    <section id="contact" className="section-divider relative overflow-hidden">
       {/* Full kente diamond pattern background */}
       <div
         className="absolute inset-0 kente-pattern pointer-events-none"
         aria-hidden="true"
       />
 
+      {/* Ambient grand-finale radial glow behind the headline */}
+      <div className="contact-ambient" aria-hidden="true" />
+
       {/* Main content — fullscreen centered */}
       <div className="relative min-h-screen flex flex-col">
         {/* Top section */}
-        <div className="flex-1 flex flex-col items-center justify-center px-6 py-24 text-center space-y-8">
+        <div className="flex-1 flex flex-col items-center justify-center px-6 md:px-16 py-24 text-center space-y-8">
           {/* Section label */}
-          <p className="font-mono text-xs uppercase tracking-widest text-outline">
-            06 / Contact
+          <p className="contact-eyebrow font-mono text-xs uppercase tracking-widest text-outline">
+            08 / Contact
           </p>
 
-          {/* Headline */}
+          {/* Headline — staggered cinematic reveal */}
           <h2
             className="font-headline font-black text-on-background leading-none"
             style={{
@@ -27,55 +30,127 @@ export default function Contact() {
               lineHeight: 1.0,
             }}
           >
-            LET'S BUILD
+            <span
+              className="contact-headline-line"
+              style={{ animationDelay: '120ms' }}
+            >
+              LET&apos;S BUILD
+            </span>
             <br />
-            <span className="text-primary-container">SOMETHING.</span>
+            <span
+              className="contact-headline-line contact-headline-wrap"
+              style={{ animationDelay: '320ms' }}
+            >
+              <span
+                className="contact-headline-glow"
+                aria-hidden="true"
+              />
+              <span className="text-primary-container contact-headline-built">
+                SOMETHING.
+              </span>
+            </span>
           </h2>
 
-          {/* Subtext */}
+          {/* Subtext — editorial quote treatment */}
           <p
-            className="font-body italic text-on-surface-variant max-w-md"
+            className="exp-quote font-body italic text-on-surface-variant max-w-md text-left mx-auto"
             style={{ fontSize: '1.125rem', lineHeight: 1.7 }}
           >
             Open to opportunities, collaborations, and interesting problems.
           </p>
 
-          {/* CTA button */}
+          {/* CTA button — premium terracotta */}
           <a
             href={`mailto:${siteData.email}`}
-            className="inline-flex items-center px-10 py-4 bg-primary-container text-on-primary-container font-label font-semibold text-sm uppercase tracking-widest hover:bg-secondary-container transition-colors"
+            aria-label={`Send an email to ${siteData.email}`}
+            className="contact-cta inline-flex items-center gap-3 px-10 py-4 bg-primary-container text-on-primary-container font-label font-semibold text-sm uppercase tracking-widest"
             style={{ borderRadius: '2px' }}
           >
-            Get in Touch
+            <span>Get in Touch</span>
+            <span className="contact-cta-arrow" aria-hidden="true">&rarr;</span>
           </a>
 
-          {/* Email */}
+          {/* Email — animated underline link */}
           <a
             href={`mailto:${siteData.email}`}
-            className="font-mono text-sm text-on-surface-variant hover:text-primary-container transition-colors"
+            aria-label={`Email address ${siteData.email}`}
+            className="contact-email font-mono text-sm text-on-surface-variant"
           >
             {siteData.email}
           </a>
 
-          {/* Placeholder for form / card */}
-          <div
-            className="w-full max-w-lg aspect-video bg-surface-container border border-outline-variant flex items-center justify-center mt-4"
+          {/* Mock contact form panel */}
+          <form
+            className="contact-form w-full max-w-lg bg-surface-container border border-outline-variant mt-4 text-left"
             style={{ borderRadius: '2px' }}
+            aria-label="Contact form"
+            onSubmit={(e) => e.preventDefault()}
           >
-            <span className="font-mono text-xs text-outline uppercase tracking-widest">
-              Contact Form
-            </span>
-          </div>
+            <label className="contact-input-row block" htmlFor="contact-name">
+              <span className="contact-input-label font-mono text-[10px] uppercase tracking-widest text-outline">
+                Name
+              </span>
+              <input
+                id="contact-name"
+                type="text"
+                name="name"
+                placeholder="Your name"
+                autoComplete="name"
+                className="contact-input font-body text-on-background"
+              />
+            </label>
+
+            <label className="contact-input-row block" htmlFor="contact-email">
+              <span className="contact-input-label font-mono text-[10px] uppercase tracking-widest text-outline">
+                Email
+              </span>
+              <input
+                id="contact-email"
+                type="email"
+                name="email"
+                placeholder="you@domain.com"
+                autoComplete="email"
+                className="contact-input font-body text-on-background"
+              />
+            </label>
+
+            <label className="contact-input-row block" htmlFor="contact-message">
+              <span className="contact-input-label font-mono text-[10px] uppercase tracking-widest text-outline">
+                Message
+              </span>
+              <textarea
+                id="contact-message"
+                name="message"
+                placeholder="Tell me about the project, role, or problem…"
+                rows={4}
+                className="contact-input contact-input-textarea font-body text-on-background"
+              />
+            </label>
+
+            <button
+              type="submit"
+              className="contact-submit font-label font-semibold text-sm uppercase tracking-widest"
+              aria-label="Send message"
+            >
+              <span>Send Message</span>
+              <span className="contact-cta-arrow" aria-hidden="true">&rarr;</span>
+            </button>
+          </form>
         </div>
 
         {/* Footer strip */}
         <footer
-          className="relative border-t border-outline-variant bg-surface-container-lowest"
+          className="contact-footer relative bg-surface-container-lowest"
           style={{ backgroundColor: '#0e0e0e' }}
         >
           <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
             {/* Wordmark */}
-            <span className="font-headline font-bold text-on-background">TB</span>
+            <span
+              className="contact-wordmark font-headline font-bold text-on-background"
+              aria-label="Thierno Barry wordmark"
+            >
+              TB
+            </span>
 
             {/* Socials */}
             <div className="flex items-center gap-6">
@@ -85,9 +160,11 @@ export default function Contact() {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary-container transition-colors"
+                  aria-label={`Visit Thierno Barry on ${key}`}
+                  className="contact-social font-mono text-xs uppercase tracking-widest text-outline"
                 >
-                  {key}
+                  <span className="contact-social-dot" aria-hidden="true" />
+                  <span className="contact-social-label">{key}</span>
                 </a>
               ))}
             </div>

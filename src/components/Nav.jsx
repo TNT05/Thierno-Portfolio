@@ -5,51 +5,97 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
+  // Scroll listener — toggles the glass/hairline state after 60px
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
+    onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // IntersectionObserver — tracks which section is in view for active nav link
+  useEffect(() => {
+    const sectionIds = navLinks
+      .map((link) => link.href.replace('#', ''))
+      .filter(Boolean);
+
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Pick the most visible intersecting section
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visible[0]) {
+          setActiveSection(`#${visible[0].target.id}`);
+        }
+      },
+      {
+        // Trigger when section crosses the middle of the viewport
+        rootMargin: '-40% 0px -55% 0px',
+        threshold: [0, 0.25, 0.5, 0.75, 1],
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-      style={{
-        backdropFilter: scrolled ? 'blur(12px)' : 'none',
-        backgroundColor: scrolled ? 'rgba(19,19,19,0.85)' : 'transparent',
-        borderBottom: scrolled ? '1px solid rgba(89,65,58,0.3)' : 'none',
-      }}
+      className={`nav-bar nav-enter fixed top-0 left-0 right-0 z-50 ${
+        scrolled ? 'nav-bar--scrolled' : ''
+      }`}
+      aria-label="Primary navigation"
+      role="navigation"
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Wordmark */}
         <a
           href="#"
-          className="font-headline font-bold text-lg tracking-tight text-on-background hover:text-primary-container transition-colors"
+          className="nav-wordmark font-headline font-bold text-xl tracking-tight"
+          aria-label={`${siteData.name} — back to top`}
         >
           {siteData.initials}
+          <span className="nav-wordmark-dot" aria-hidden="true" />
         </a>
 
         {/* Links */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="font-label text-sm uppercase tracking-widest text-on-surface-variant hover:text-on-background transition-colors relative group"
-            >
-              {link.label}
-              <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-primary-container group-hover:w-full transition-all duration-200" />
-            </a>
-          ))}
+        <div className="hidden md:flex items-center gap-8" role="menubar">
+          {navLinks.map((link) => {
+            const isActive = activeSection === link.href;
+            return (
+              <a
+                key={link.label}
+                href={link.href}
+                role="menuitem"
+                aria-current={isActive ? 'location' : undefined}
+                className={`nav-link font-label text-sm uppercase tracking-widest ${
+                  isActive ? 'nav-link--active' : ''
+                }`}
+              >
+                {link.label}
+              </a>
+            );
+          })}
         </div>
 
         {/* Resume CTA */}
         <a
           href="#contact"
-          className="hidden md:inline-flex items-center px-4 py-2 bg-primary-container text-on-primary-container font-label font-semibold text-xs uppercase tracking-widest hover:bg-secondary-container transition-colors"
-          style={{ borderRadius: '2px' }}
+          className="nav-cta hidden md:inline-flex items-center font-label font-semibold text-xs uppercase tracking-widest"
+          aria-label="View resume and contact"
         >
-          Resume
+          <span className="nav-cta-label">Resume</span>
+          <span className="nav-cta-arrow" aria-hidden="true">
+            &rarr;
+          </span>
         </a>
       </div>
     </nav>

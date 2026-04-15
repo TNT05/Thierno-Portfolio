@@ -4,7 +4,7 @@ export default function Hero() {
 	return (
 		<section
 			id="hero"
-			className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-background"
+			className="relative min-h-screen flex flex-col justify-center overflow-hidden"
 		>
 			{/* Kente right-edge band */}
 			<div

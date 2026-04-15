@@ -2,7 +2,11 @@ import { education } from '../data/mockData';
 
 export default function Education() {
   return (
-    <section id="education" className="relative bg-surface-container-lowest py-24 overflow-hidden">
+    <section
+      id="education"
+      className="section-divider relative py-24 overflow-hidden"
+      aria-labelledby="education-heading"
+    >
       {/* Background kente */}
       <div
         className="absolute inset-0 kente-pattern-subtle pointer-events-none"
@@ -12,46 +16,64 @@ export default function Education() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-16">
         {/* Section label */}
         <p className="font-mono text-xs uppercase tracking-widest text-outline mb-4">
-          08 / Education
+          06 / Education
         </p>
 
-        {/* Headline */}
-        <h2
-          className="font-headline font-black text-on-background mb-4 leading-tight"
-          style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', letterSpacing: '-0.03em' }}
+        {/* Headline with breathing radial glow */}
+        <div className="exp-headline-wrap">
+          <div className="exp-headline-glow" aria-hidden="true" />
+          <h2
+            id="education-heading"
+            className="exp-headline-built font-headline font-black text-on-background mb-4 leading-tight"
+            style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', letterSpacing: '-0.03em' }}
+          >
+            The Foundation
+          </h2>
+        </div>
+
+        <p
+          className="exp-quote font-body italic text-on-surface-variant mb-16 max-w-md"
+          style={{ lineHeight: 1.65 }}
         >
-          The Foundation
-        </h2>
-        <p className="font-body italic text-on-surface-variant mb-16 max-w-md">
           The intellectual scaffolding upon which any engineering practice is built.
         </p>
 
         {/* Education cards */}
         <div className="space-y-8">
           {education.map((edu, idx) => (
-            <div
+            <article
               key={edu.institution}
-              className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8 p-8 border-l-2 border-primary-container"
-              style={{ backgroundColor: 'rgba(28,27,27,0.8)', borderRadius: '2px' }}
+              className="edu-card relative grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8 p-8"
+              style={{
+                backgroundColor: 'rgba(28,27,27,0.8)',
+                borderRadius: '2px',
+                animationDelay: `${idx * 150}ms`,
+              }}
+              aria-label={`${edu.degree} at ${edu.institution}`}
             >
+              {/* Gradient left accent rail */}
+              <span className="edu-accent-rail" aria-hidden="true" />
+
               {/* Left — Content */}
-              <div className="space-y-4">
+              <div className="space-y-4 relative">
                 {/* Institution */}
-                <p className="font-mono text-xs uppercase tracking-widest text-outline">
+                <p className="edu-institution font-mono text-xs uppercase tracking-widest text-outline">
                   {edu.institution}
                 </p>
 
                 {/* Degree */}
                 <h3
-                  className="font-headline font-bold text-primary-container leading-tight"
+                  className="edu-degree font-headline font-bold text-primary-container leading-tight"
                   style={{ fontSize: 'clamp(1.25rem, 2.5vw, 2rem)', letterSpacing: '-0.01em' }}
                 >
                   {edu.degree}
                 </h3>
 
-                {/* Period */}
-                <p className="font-mono text-xs uppercase tracking-widest text-outline">
-                  {edu.period}
+                {/* Period as pill badge */}
+                <p>
+                  <span className="edu-period font-mono text-[0.68rem] uppercase tracking-widest text-outline">
+                    {edu.period}
+                  </span>
                 </p>
 
                 {/* Description */}
@@ -60,42 +82,58 @@ export default function Education() {
                 </p>
 
                 {/* Highlights */}
-                <ul className="space-y-1">
+                <ul className="space-y-1" aria-label="Coursework highlights">
                   {edu.highlights.map((item) => (
                     <li
                       key={item}
-                      className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-outline"
+                      className="edu-highlight font-mono text-xs uppercase tracking-widest text-outline"
                     >
-                      <span className="w-1 h-1 rounded-full bg-primary-container shrink-0" />
+                      <span className="edu-highlight-dot" aria-hidden="true" />
                       {item}
                     </li>
                   ))}
                 </ul>
               </div>
 
-              {/* Right — Image placeholder */}
+              {/* Right — Decorative index panel */}
               <div
-                className="hidden lg:flex items-center justify-center bg-surface-container border border-outline-variant"
-                style={{ borderRadius: '2px', minHeight: '180px' }}
+                className="edu-index-panel hidden lg:flex flex-col items-center justify-center border border-outline-variant relative"
+                style={{ borderRadius: '2px', minHeight: '200px' }}
+                aria-hidden="true"
               >
-                <span className="font-mono text-xs text-outline uppercase tracking-widest text-center px-4">
-                  Institution
-                  <br />
-                  Image
+                <span className="edu-index relative z-10">
+                  {String(idx + 1).padStart(2, '0')}
                 </span>
+                <span className="edu-crest-label mt-2 relative z-10">Chapter</span>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
 
-      {/* Bottom footer strip */}
+      {/* Bottom editorial callout — replaces plain footer strip */}
       <div className="mt-24 border-t border-outline-variant">
-        <div className="max-w-7xl mx-auto px-6 md:px-16 py-6 flex items-center justify-between">
-          <span className="font-headline font-bold text-on-background text-sm">TB</span>
-          <p className="font-mono text-xs text-outline uppercase tracking-widest">
-            Building the evolution of digital craft
+        <div className="max-w-7xl mx-auto px-6 md:px-16 py-10">
+          <p
+            className="edu-callout font-headline text-on-background max-w-3xl"
+            style={{
+              fontSize: 'clamp(1.125rem, 2vw, 1.5rem)',
+              lineHeight: 1.45,
+              letterSpacing: '-0.01em',
+              opacity: 0.32,
+            }}
+          >
+            Every line of code rests on a{' '}
+            <span className="exp-callout-word">Foundation</span> of theory — and every
+            practice of <span className="exp-callout-word">Engineering</span> begins where
+            rigor meets curiosity.
           </p>
+          <div className="mt-8 flex items-center justify-between">
+            <span className="font-headline font-bold text-on-background text-sm">TB</span>
+            <p className="font-mono text-xs text-outline uppercase tracking-widest">
+              Building the evolution of digital craft
+            </p>
+          </div>
         </div>
       </div>
     </section>

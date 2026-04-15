@@ -2,7 +2,7 @@ import { skills } from '../data/mockData';
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative bg-surface-container-lowest py-24 overflow-hidden">
+    <section id="skills" className="section-divider relative py-24 overflow-hidden">
       {/* Background kente pattern */}
       <div
         className="absolute inset-0 kente-pattern pointer-events-none"
@@ -12,33 +12,53 @@ export default function Skills() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-16">
         {/* Section label */}
         <p className="font-mono text-xs uppercase tracking-widest text-outline mb-4">
-          05 / Skills
+          04 / Skills
         </p>
 
-        {/* Section headline */}
-        <h2
-          className="font-headline font-black text-on-background mb-16 leading-none"
-          style={{
-            fontSize: 'clamp(3rem, 8vw, 7rem)',
-            letterSpacing: '-0.04em',
-          }}
-        >
-          THE STACK
-        </h2>
+        {/* Section headline with warm radial glow */}
+        <div className="skills-headline-wrap mb-16">
+          <div
+            className="skills-headline-glow motion-reduce:hidden"
+            aria-hidden="true"
+          />
+          <h2
+            className="font-headline font-black text-on-background leading-none"
+            style={{
+              fontSize: 'clamp(3rem, 8vw, 7rem)',
+              letterSpacing: '-0.04em',
+            }}
+          >
+            THE STACK
+          </h2>
+        </div>
 
-        {/* Left border accent */}
-        <div className="absolute left-0 top-24 bottom-24 w-1 bg-primary-container opacity-60" />
+        {/* Left gradient accent rail */}
+        <div
+          className="skills-accent-rail absolute left-0 top-24 bottom-24 w-[3px]"
+          aria-hidden="true"
+        />
 
-        {/* Skills grid — 4 columns */}
+        {/* Skills grid — 4 columns with staggered entrance */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {Object.entries(skills).map(([category, items], catIdx) => (
-            <div key={category} className="space-y-4">
+            <div
+              key={category}
+              className="skills-col space-y-4"
+              style={{ animationDelay: `${catIdx * 110}ms` }}
+            >
               {/* Column header */}
               <div className="space-y-2">
-                <h3 className="font-mono text-xs uppercase tracking-widest text-primary-container font-semibold">
+                <h3 className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-primary-container font-semibold">
+                  <span
+                    className="inline-block w-1.5 h-1.5 rounded-full bg-primary-container"
+                    aria-hidden="true"
+                  />
                   {category}
                 </h3>
-                <div className="w-8 h-px bg-primary-container" />
+                <div
+                  className="skills-col-rule w-10 h-px bg-primary-container"
+                  style={{ animationDelay: `${catIdx * 110 + 260}ms` }}
+                />
               </div>
 
               {/* Badges */}
@@ -48,7 +68,7 @@ export default function Skills() {
                   return (
                     <span
                       key={skill}
-                      className="font-mono text-xs uppercase tracking-widest px-3 py-1.5 border border-outline-variant"
+                      className={`skill-badge ${isFeatured ? 'skill-badge--featured' : ''} font-mono text-xs uppercase tracking-widest px-3 py-1.5 border border-outline-variant`}
                       style={{
                         backgroundColor: '#1c1b1b',
                         borderRadius: '4px',
@@ -66,16 +86,14 @@ export default function Skills() {
         </div>
 
         {/* Bottom editorial section */}
-        <div
-          className="border-t border-outline-variant pt-12 grid grid-cols-1 lg:grid-cols-2 gap-12"
-        >
+        <div className="border-t border-outline-variant pt-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Quote */}
           <div className="space-y-4">
             <p className="font-mono text-xs uppercase tracking-widest text-primary-container">
               Technical Philosophy
             </p>
             <blockquote
-              className="font-body italic text-on-surface-variant"
+              className="skills-quote font-body italic text-on-surface-variant"
               style={{ fontSize: '1.125rem', lineHeight: 1.7 }}
             >
               "Precision is not just about writing code; it's about architecting systems
@@ -89,24 +107,39 @@ export default function Skills() {
           {/* Stats block */}
           <div className="space-y-4">
             <div className="flex items-center gap-3 font-mono text-xs">
-              <span className="text-primary-container uppercase tracking-widest">Encryption_Status:</span>
+              <span className="text-primary-container uppercase tracking-widest">
+                Encryption_Status:
+              </span>
               <span className="text-tertiary uppercase tracking-widest">Secure</span>
             </div>
             <p className="font-body text-on-surface-variant" style={{ lineHeight: 1.7 }}>
               My development methodology leverages high-performance backends with modern
-              frontend architectures. I prioritize <strong className="text-on-background">Type Safety</strong> across
-              the full stack while maintaining a <strong className="text-on-background">Brutalist</strong> approach
-              to UI/UX, ensuring that every interaction is intentional.
+              frontend architectures. I prioritize{' '}
+              <strong className="text-on-background">Type Safety</strong> across the full
+              stack while maintaining a{' '}
+              <strong className="text-on-background">Brutalist</strong> approach to
+              UI/UX, ensuring that every interaction is intentional.
             </p>
-            <div className="flex gap-8 font-mono">
+            <div className="flex gap-8 font-mono pt-2">
               {[
                 { label: 'Uptime', value: '99.99%' },
                 { label: 'Coverage', value: '94%' },
                 { label: 'Velocity', value: 'MAX' },
               ].map(({ label, value }) => (
-                <div key={label}>
-                  <div className="text-xs uppercase tracking-widest text-outline">{label}</div>
-                  <div className="text-lg font-semibold text-on-background">{value}</div>
+                <div key={label} className="skills-stat">
+                  <div className="text-[10px] uppercase tracking-[0.18em] text-outline mb-1">
+                    {label}
+                  </div>
+                  <div
+                    className="font-headline font-black text-on-background leading-none"
+                    style={{
+                      fontSize: '1.875rem',
+                      fontVariantNumeric: 'tabular-nums',
+                      letterSpacing: '-0.02em',
+                    }}
+                  >
+                    {value}
+                  </div>
                 </div>
               ))}
             </div>
