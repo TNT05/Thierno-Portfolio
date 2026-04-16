@@ -57,7 +57,7 @@ export default function About() {
 						>
 							Engineer.
 							<br />
-							Athlete.
+							Polymath.
 							<br />
 							Builder.
 						</h2>
@@ -82,27 +82,30 @@ export default function About() {
 							style={{ lineHeight: 1.75 }}
 						>
 							<p>
-								As a Canadian software engineer of Guinean heritage, my work
-								exists at the intersection of high-performance technical
-								architecture and profound cultural identity. I approach every
-								codebase with the same tactical precision I honed as a
-								competitive athlete.
+								Software Engineering graduate from Concordia University's Gina
+								Cody School with over four years of industry experience. My
+								career has traversed aerospace at MDA Space, robotics at Kinova,
+								energy infrastructure at Hydro-Québec, and fintech — each
+								industry sharpening a different edge of the same blade.
 							</p>
 							<p>
-								To me, building is not just about execution — it is about
-								lineage. It is about translating the resilience of my West
-								African roots into digital systems that are as enduring as they
-								are elegant. My focus remains unwavering: creating products that
-								resonate with human purpose and technical excellence.
+								I bring a rare combination of firmware-level precision and
+								modern web craftsmanship — equally comfortable writing C++
+								firmware for robotic arms and architecting financial systems for
+								satellites. To me, building is not just execution — it is
+								lineage. Every system I ship carries the resilience of where I
+								come from.
 							</p>
 						</div>
 
-						{/* Download link */}
+						{/* Download resume */}
 						<a
-							href="#contact"
+							href="/Thierno-resume.pdf"
+							target="_blank"
+							rel="noopener noreferrer"
 							className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-primary-container hover:text-secondary transition-colors"
 						>
-							Download Manifest
+							Download Résumé
 							<span aria-hidden="true" className="text-outline">
 								——
 							</span>

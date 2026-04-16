@@ -75,6 +75,13 @@ export default function WorkExperience() {
 									{job.company}
 								</h3>
 
+								{/* Location */}
+								{job.location && (
+									<p className="font-mono text-xs uppercase tracking-widest text-outline">
+										{job.location}
+									</p>
+								)}
+
 								{/* Quote */}
 								<blockquote
 									className="exp-quote font-body italic text-on-surface-variant"
@@ -82,6 +89,22 @@ export default function WorkExperience() {
 								>
 									{job.quote}
 								</blockquote>
+
+								{/* Bullets */}
+								{job.bullets && job.bullets.length > 0 && (
+									<ul className="space-y-2">
+										{job.bullets.map((bullet, i) => (
+											<li
+												key={i}
+												className="edu-highlight font-body text-sm text-on-surface-variant"
+												style={{ lineHeight: 1.65 }}
+											>
+												<span className="edu-highlight-dot" aria-hidden="true" />
+												{bullet}
+											</li>
+										))}
+									</ul>
+								)}
 
 								{/* Stack badges */}
 								<div className="flex flex-wrap gap-2">
