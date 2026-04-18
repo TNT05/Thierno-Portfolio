@@ -89,9 +89,10 @@ export default function Nav() {
         {/* Resume CTA */}
         <a
           href="/Thierno-resume.pdf"
-          download
+          target="_blank"
+          rel="noopener noreferrer"
           className="nav-cta hidden md:inline-flex items-center font-label font-semibold text-xs uppercase tracking-widest"
-          aria-label="Download resume PDF"
+          aria-label="Open resume PDF"
         >
           <span className="nav-cta-label">Resume</span>
           <span className="nav-cta-arrow" aria-hidden="true">

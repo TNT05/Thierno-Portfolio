@@ -127,26 +127,6 @@ export default function WorkExperience() {
 					))}
 				</div>
 
-				{/* Bottom editorial callout */}
-				<div className="mt-24 pt-12 border-t border-outline-variant">
-					<p
-						className="exp-callout font-headline font-black text-center uppercase text-on-surface-variant leading-tight"
-						style={{
-							fontSize: 'clamp(1rem, 3vw, 2rem)',
-							letterSpacing: '0.1em',
-						}}
-					>
-						Engineering Narratives Through{' '}
-						<em className="exp-callout-word text-primary-container not-italic">
-							Code
-						</em>{' '}
-						And{' '}
-						<em className="exp-callout-word text-primary-container not-italic">
-							Architecture
-						</em>
-						.
-					</p>
-				</div>
 			</div>
 		</section>
 	);

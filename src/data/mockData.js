@@ -6,8 +6,8 @@ export const siteData = {
   phone: '514-663-6153',
   location: 'Montreal, QC',
   socials: {
-    github: 'https://github.com/thierno',
-    linkedin: 'https://linkedin.com/in/Thierno',
+    github: 'https://github.com/TNT05',
+    linkedin: 'https://www.linkedin.com/in/thierno-ibrahima-barry-16a227203',
   },
 };
 

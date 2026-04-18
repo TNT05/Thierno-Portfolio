@@ -111,31 +111,6 @@ export default function Education() {
         </div>
       </div>
 
-      {/* Bottom editorial callout — replaces plain footer strip */}
-      <div className="mt-24 border-t border-outline-variant">
-        <div className="max-w-7xl mx-auto px-6 md:px-16 py-10">
-          <p
-            className="edu-callout font-headline text-on-background max-w-3xl"
-            style={{
-              fontSize: 'clamp(1.125rem, 2vw, 1.5rem)',
-              lineHeight: 1.45,
-              letterSpacing: '-0.01em',
-              opacity: 0.32,
-            }}
-          >
-            Every line of code rests on a{' '}
-            <span className="exp-callout-word">Foundation</span> of theory — and every
-            practice of <span className="exp-callout-word">Engineering</span> begins where
-            rigor meets curiosity.
-          </p>
-          <div className="mt-8 flex items-center justify-between">
-            <span className="font-headline font-bold text-on-background text-sm">TB</span>
-            <p className="font-mono text-xs text-outline uppercase tracking-widest">
-              Building the evolution of digital craft
-            </p>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }
