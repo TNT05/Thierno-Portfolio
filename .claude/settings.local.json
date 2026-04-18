@@ -17,7 +17,8 @@
       "Bash(rtk git:*)",
       "Bash(claude init:*)",
       "mcp__magic__21st_magic_component_inspiration",
-      "mcp__magic__21st_magic_component_refiner"
+      "mcp__magic__21st_magic_component_refiner",
+      "Bash(gh auth *)"
     ]
   }
 }
