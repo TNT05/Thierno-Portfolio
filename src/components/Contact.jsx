@@ -79,63 +79,6 @@ export default function Contact() {
             {siteData.email}
           </a>
 
-          {/* Mock contact form panel */}
-          <form
-            className="contact-form w-full max-w-lg bg-surface-container border border-outline-variant mt-4 text-left"
-            style={{ borderRadius: '2px' }}
-            aria-label="Contact form"
-            onSubmit={(e) => e.preventDefault()}
-          >
-            <label className="contact-input-row block" htmlFor="contact-name">
-              <span className="contact-input-label font-mono text-[10px] uppercase tracking-widest text-outline">
-                Name
-              </span>
-              <input
-                id="contact-name"
-                type="text"
-                name="name"
-                placeholder="Your name"
-                autoComplete="name"
-                className="contact-input font-body text-on-background"
-              />
-            </label>
-
-            <label className="contact-input-row block" htmlFor="contact-email">
-              <span className="contact-input-label font-mono text-[10px] uppercase tracking-widest text-outline">
-                Email
-              </span>
-              <input
-                id="contact-email"
-                type="email"
-                name="email"
-                placeholder="you@domain.com"
-                autoComplete="email"
-                className="contact-input font-body text-on-background"
-              />
-            </label>
-
-            <label className="contact-input-row block" htmlFor="contact-message">
-              <span className="contact-input-label font-mono text-[10px] uppercase tracking-widest text-outline">
-                Message
-              </span>
-              <textarea
-                id="contact-message"
-                name="message"
-                placeholder="Tell me about the project, role, or problem…"
-                rows={4}
-                className="contact-input contact-input-textarea font-body text-on-background"
-              />
-            </label>
-
-            <button
-              type="submit"
-              className="contact-submit font-label font-semibold text-sm uppercase tracking-widest"
-              aria-label="Send message"
-            >
-              <span>Send Message</span>
-              <span className="contact-cta-arrow" aria-hidden="true">&rarr;</span>
-            </button>
-          </form>
         </div>
 
         {/* Footer strip */}

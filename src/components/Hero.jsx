@@ -81,13 +81,6 @@ export default function Hero() {
 					<span aria-hidden="true">→</span>
 				</a>
 
-				{/* Scroll indicator */}
-				<div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-outline">
-					<span className="font-mono text-xs uppercase tracking-widest">
-						Scroll
-					</span>
-					<div className="w-px h-8 bg-outline-variant animate-pulse" />
-				</div>
 			</div>
 
 			{/* Footer line */}
