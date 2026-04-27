@@ -115,12 +115,12 @@ export const experience = [
   {
     period: 'Aug 2024 — Present',
     company: 'MDA SPACE',
-    role: 'Intermediate Software Engineer',
+    role: 'Software Engineer – Team Lead',
     location: 'Longueuil, QC',
     quote: '"Building the systems behind satellite acquisitions — from financial infrastructure to orbital data pipelines, where the stakes are measured in orbit."',
     bullets: [
-      'Built from scratch a Financial Update System (FUS) with React and Django REST Framework for processing invoices and payments.',
-      'Developed core satellite picture acquisition functionalities using the Java Spring framework.',
+      'Led a project utilizing React and Django REST Framework to build from scratch a Financial Update System (FUS) for processing invoices and payments.',
+      'Main lead of a team responsible for developing core satellite picture acquisition functionalities with the Java Spring framework.',
       'Built a RESTful API notifying clients of upcoming maintenance windows.',
       'Deployed and managed Docker containers across company servers, including system-admin and monitoring tasks.',
       'Led a major Java 8 → Java 17 migration to reduce vulnerabilities and improve maintainability.',
@@ -130,7 +130,7 @@ export const experience = [
   {
     period: 'May 2022 — Sep 2023',
     company: 'KINOVA ROBOTICS',
-    role: 'Software Developer',
+    role: 'Software Developer – Intermediate',
     location: 'Boisbriand, QC',
     quote: '"Translating firmware precision into robotic intelligence — writing the code that moves the arm, connects the sensors, and bridges machines to software."',
     bullets: [
